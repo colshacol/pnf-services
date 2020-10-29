@@ -1,5 +1,5 @@
 import { of } from "await-of"
-import curry from "just-curry-it"
+import curry from "utilities/just-curry-it"
 import { fetcherDelete, fetcherGet, fetcherPost } from "./shared"
 
 const getAll = async () => {
