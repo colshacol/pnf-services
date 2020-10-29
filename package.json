@@ -7,6 +7,7 @@
   "dependencies": {
     "@vercel/node": "^1.8.3",
     "await-of": "^3.1.0",
+    "common-tags": "^1.8.0",
     "dayjs": "^1.8.36",
     "form-data": "^3.0.0",
     "get-value": "^3.0.1",
