@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "preBuild": "vercel-buid"
+  },
   "dependencies": {
     "@vercel/node": "^1.8.3",
     "await-of": "^3.1.0",

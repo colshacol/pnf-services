@@ -1,5 +1,4 @@
 import { createHtml } from "./createHtml"
-import { handleTable } from "./handleTable"
 
 export function handleTable(req, res) {
   return (data, options) => {
