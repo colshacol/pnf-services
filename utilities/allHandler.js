@@ -1,3 +1,4 @@
+import getValue from "get-value"
 import { getAll } from "./shared"
 import { createHtml } from "./createHtml"
 import { handleTable } from "./handleTable"
@@ -10,7 +11,7 @@ export function allHandler(options) {
   return async (req, res) => {
     log("GOT REQUEST")
     const { data, error } = await getAll(options.rechargeType)
-    const innerData = data?.[options.rechargeType]
+    const innerData = getValue(data, [options.rechargeType])
     const query = req.query || {}
 
     error && logErr("GOT ERROR", error)

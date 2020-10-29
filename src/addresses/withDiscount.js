@@ -1,3 +1,4 @@
+import getValue from "get-value"
 import micro from "micro-cors"
 import { getAddresses } from "../utilities/addresses"
 
@@ -11,7 +12,7 @@ async function getAll(req, res) {
   const { data, error } = await getAddresses.withDiscount(req.query.discountCode)
   logResult(data, error)
 
-  const count = data?.addresses?.length
+  const count = getValue(data, "addresses.length")
   return res.send({ success: true, count, data, error })
 }
 

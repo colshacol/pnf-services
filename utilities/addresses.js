@@ -1,3 +1,4 @@
+import getValue from "get-value"
 import { of } from "await-of"
 import curry from "just-curry-it"
 import { fetcherGet, fetcherPost, getDiscountVariations, HEADERS } from "./shared"
@@ -66,7 +67,7 @@ const addressesWithDiscountVariation = async (discountCode) => {
     const { data, error } = await getAddresses.withDiscount(discountCode)
     error && console.log(JSON.parse(error.message))
     error && console.log(`ERROR getting addresses for discount ${discountCode}`)
-    data?.addresses.map(recordAddressData(discountCode))
+    getVaue(data, "addresses", []).map(recordAddressData(discountCode))
   })
 
   await Promise.all(promises)
